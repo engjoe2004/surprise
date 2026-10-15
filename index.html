@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>كل سنة وإنتي طيبة ❤️</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;500;600;700&family=Aref+Ruqaa:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="bg" aria-hidden="true"></canvas><canvas id="confetti" aria-hidden="true"></canvas>
+
+<div id="welcome" role="dialog" aria-label="الترحيب">
+  <div>
+    <h1>كل سنة وإنتي طيبة يااجمل و اقرب و  أحب الناس عندي واغلاهم ❤️</h1>
+    <p>عملتلك حاجة صغيرة من قلبي ان شائ الله هتعجبك. افتحيها لما تكوني جاهزة.</p>
+    <button class="btn" id="openBtn">افتحي  ✨</button>
+  </div>
+</div>
+
+<main id="main">
+  <section class="hero" id="top">
+    <h2 id="heroName"></h2>
+    <p id="heroDate"></p>
+  </section>
+  <nav class="glass" aria-label="الأقسام">
+    <a href="#memories">الذكريات</a><a href="#videos">الفيديوهات</a><a href="#letter">الرسالة</a><a href="#wish">أمنية</a><a href="#timeline">حكايتنا</a>
+  </nav>
+
+  <section id="memories">
+    <h2 class="title">ذكرياتنا</h2>
+    <p class="sub">اضغطي على أي صورة عشان تشوفيها أكبر.</p>
+    <div class="grid" id="grid"></div>
+  </section>
+
+  <section id="videos">
+    <h2 class="title">لحظاتنا الحلوة</h2>
+    <p class="sub">كام لحظة من أحلى لحظاتنا بالصوت والصورة.</p>
+    <div class="vids" id="vids"></div>
+  </section>
+
+  <section id="letter">
+    <h2 class="title">رسالة ليكي وحدك 💌</h2>
+    <p class="sub">اضغطي على الظرف.</p>
+    <div id="letterBox">
+      <button class="env" id="env" aria-label="افتحي الرسالة"><i class="flap"></i><b class="seal">❤️</b><span class="t">لكِ</span></button>
+      <article class="paper" id="paper" aria-live="polite"><div id="letterText" class="caret"></div><div class="sig" id="sig"></div></article>
+    </div>
+  </section>
+
+  <section id="wish" class="cakeWrap">
+    <h2 class="title">اتمني أمنية</h2>
+    <p class="sub">اقفلي عينيكي، واتمني حاجة حلوة، وبعدين دوسي على الزرار.</p>
+    <div class="cake" id="cake" role="img" aria-label="تورتة عيد ميلاد عليها شموع">
+      <div class="candles" id="candles"></div>
+      <div class="layer l3"></div><div class="layer l2"></div><div class="layer l1"></div>
+    </div>
+    <button class="btn" id="wishBtn">اتمني أمنية 🎂</button>
+    <div class="wish" id="wishMsg" aria-live="polite"></div>
+    <div class="secret">
+      <button class="heart" id="secretHeart" aria-label="قلب سري، اضغطي عليه عشان تظهر رسالة" aria-expanded="false">💖</button>
+      <div class="glass secretMsg" id="secretMsg"></div>
+    </div>
+  </section>
+
+  <section id="timeline">
+    <h2 class="title">حكايتنا لحد دلوقتي</h2>
+    <p class="sub">اللحظات اللي خلتنا إحنا.</p>
+    <div class="tl" id="tl"></div>
+  </section>
+
+  <section class="finale">
+    <h2>ودي لسه بداية ذكرياتنا الحلوة ❤️</h2>
+    <p id="finalSig"></p>
+  </section>
+  <footer>اتعمل بكل حب</footer>
+</main>
+
+<div id="lb" role="dialog" aria-modal="true" aria-label="عارض الصور">
+  <button class="lbb" id="lbx" aria-label="إغلاق">✕</button><button class="lbb" id="lbp" aria-label="الصورة السابقة">›</button><button class="lbb" id="lbn" aria-label="الصورة التالية">‹</button>
+  <figure><div id="lbimg"></div><figcaption id="lbcap"></figcaption></figure>
+</div>
+
+<div id="music" class="glass">
+  <button id="musicBtn" aria-label="تشغيل الموسيقى">▶</button><small>أغنيتنا <span class="eq" aria-hidden="true"><i></i><i></i><i></i></span></small>
+</div>
+<audio id="audio" loop preload="none"></audio>
+
+<script src="config.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
